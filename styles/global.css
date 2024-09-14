@@ -1,0 +1,172 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*{
+  font-family: 'Gilroy', sans-serif;
+}
+
+/* styles/globals.css or a specific CSS file */
+.search-results-summary p {
+    font-size: 16px;
+    margin: 0;
+  }
+  
+  .search-results-summary hr {
+    margin-top: 8px;
+  }
+  
+/* Add to globals.css or Tailwind config */
+
+/* styles/globals.css */
+
+.search-suggestions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .suggestions-buttons-container button {
+    background-color: #fef7f0;
+    border: 1px solid #e7760e;
+    color: #e7760e;
+  }
+  
+  .filter-button {
+    border: 1px solid #d3d3d3; /* Light grey */
+    color: #606060; /* Darker grey */
+  }
+  
+  .filter-button .text-dark-gray {
+    color: #606060; /* Darker grey */
+  }
+  
+  .share-button {
+    border: 1px solid #d3d3d3; /* Light grey */
+    color: #606060; /* Darker grey */
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+  }
+  
+  /* components/ResultList.css */
+
+.result-list {
+    margin-top: 20px;
+  }
+  
+  .result-row {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: white;
+    margin-bottom: 10px;
+    transition: background-color 0.2s ease;
+  }
+  
+  .result-row:hover {
+    background-color: #f4f4f4;
+  }
+  
+  .mark-box {
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    padding: 10px;
+    box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.05);
+    font-weight: bold;
+  }
+  
+  .details, .status, .class-description {
+    flex: 1;
+    margin-left: 20px;
+  }
+  
+  .status-indicator {
+    font-weight: bold;
+  }
+  
+  .status-indicator.registered {
+    color: green;
+  }
+  
+  .status-indicator.pending {
+    color: yellow;
+  }
+  
+  .status-indicator.abandoned {
+    color: red;
+  }
+  
+  .loader {
+    width: 10px;
+    height: 10px;
+    border: 2px solid red;
+    border-radius: 50%;
+    display: inline-block;
+  }
+  
+  /* styles.css */
+.status-dot {
+  height: 10px;
+  width: 10px;
+  border-radius: 50%;
+  display: inline-block;
+  margin-right: 5px;
+}
+
+.status-dot.Registered {
+  background-color: green;
+}
+
+.status-dot.Pending {
+  background-color: yellow;
+}
+
+.status-dot.Abandoned {
+  background-color: red;
+}
+
+table tr:hover {
+  background-color: #f4f4f4;
+}
+
+.bg-white {
+  background-color: white;
+}
+
+.shadow-sm {
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+
+
+/* Add this in your global CSS file or a relevant CSS module */
+.pagination {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.page-button {
+  background-color: #f0f0f0;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  color: #333;
+  cursor: pointer;
+  font-size: 16px;
+  margin: 0 5px;
+  padding: 10px 15px;
+}
+
+.page-button.active {
+  background-color: #0070f3;
+  color: white;
+}
+
+.page-button:hover {
+  background-color: #ddd;
+}
