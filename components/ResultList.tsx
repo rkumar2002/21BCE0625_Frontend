@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import Image from 'next/image'; 
 import circularIcon from '../public/circular-arrow.png';
 import { FaSearch } from 'react-icons/fa';
-
+import Flask from '../public/Flask.png';
 
 interface Trademark {
   _id: string;
@@ -104,7 +104,7 @@ const ResultList: React.FC<Props> = ({ data, fetchFilteredData }) => {
                       <td className="p-4 text-sm text-gray-600">
                         <p className="font-semibold text-gray-800">{item._source.mark_identification}</p>
                         <p className="text-gray-600">{item._source.current_owner}</p>
-                        <div className="my-2" />
+                        <div className="my-5" />
                         <p className="text-gray-500">{item._id}</p>
                         <p className="text-gray-500">{convertTimestamp(item._source.registration_date)}</p>
                       </td>
@@ -135,7 +135,7 @@ const ResultList: React.FC<Props> = ({ data, fetchFilteredData }) => {
                           {item._source.mark_description_description && item._source.mark_description_description.length > 0
                             ? item._source.mark_description_description[0]?.substring(0, 50) + '...'
                             : 'No description available'}
-                        </p>
+                        </p><br/>
                         <p className="text-gray-500">{`Class ${item._source.class_codes.join(', ')}`}</p>
                       </td>
                     </tr>
