@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import Image from 'next/image'; // Import Image component for optimized images
-import trademarkiaLogo from '../public/trademarkia-logo.png'; // Adjust the path to your logo
+import Image from 'next/image';
+import trademarkiaLogo from '../public/trademarkia-logo.png'; 
 import { FaSearch } from 'react-icons/fa';
 
 interface SearchBarProps {
@@ -24,15 +24,15 @@ const SearchBar: React.FC<SearchBarProps> = ({ onSearch }) => {
 
   return (
     <header className="search-header bg-[#F8FAFE] border-b-4 border-[#eaf1ff] flex items-center p-4 px-16 w-full">
-      <div className="logo-container mr-4">
+      <div className="logo-container mr-10">
         <Image
           src={trademarkiaLogo}
           alt="Trademarkia Logo"
-          width={120} // Adjust width as needed
-          height={40} // Adjust height as needed
+          width={140}
+          height={40} 
         />
       </div>
-      <div className="flex items-center border border-gray-300 rounded-lg flex-grow">
+      <div className="flex items-center border border-gray-300 rounded-lg w-1/2">
         <FaSearch className="text-gray-500 ml-2" />
         <input
           type="text"
@@ -54,3 +54,4 @@ const SearchBar: React.FC<SearchBarProps> = ({ onSearch }) => {
 };
 
 export default SearchBar;
+
