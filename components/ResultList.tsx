@@ -152,7 +152,7 @@ const ResultList: React.FC<Props> = ({ data, fetchFilteredData }) => {
                   <p className="text-gray-500">{convertTimestamp(item._source.registration_date)}</p>
                   <div className="flex items-center mt-2">
                     <span className="inline-block w-3 h-3 mr-2 rounded-full" style={{ backgroundColor: getStatusDotColor(item._source.status_type) }}></span>
-                    <p className="font-semibold text-gray-800">
+                    <p className="font-semibold text-gray-800" style={{color : getStatusDotColor(item._source.status_type)}}>
                       {item._source.status_type.charAt(0).toUpperCase() + item._source.status_type.slice(1)}
                     </p>
                   </div>
