@@ -222,9 +222,11 @@ const ResultList: React.FC<Props> = ({ data, fetchFilteredData }) => {
       </button>
     </div>
   </div>
-  <div className='bg-white shadow-sm p-5 rounded-md'>
-          <div className='text-sm'>
-            <span className='mr-4 cursor-pointer hover:font-bold'>Owners</span><span className='mr-4 cursor-pointer hover:font-bold'>Law Firms</span><span className='cursor-pointer hover:font-bold'>Attorneys</span>
+  <div className='bg-white shadow-sm p-5 pb-1 rounded-md'>
+          <div className='text-sm flex flex-row'>
+            <div className='mr-4 cursor-pointer p-1 border-2 border-transparent hover:border-b-blue-300 hover:text-blue-400 focus:text-blue-700 focus:border-b-blue-700' tabIndex={0}>Owners</div>
+            <div className='mr-4 cursor-pointer p-1 border-2 border-transparent hover:border-b-blue-300 hover:text-blue-400  focus:text-blue-700 focus:border-b-blue-700' tabIndex={0}>Law Firms</div>
+            <div className='cursor-pointer p-1 border-2 border-transparent hover:border-b-blue-300 hover:text-blue-400  focus:text-blue-700 focus:border-b-blue-700' tabIndex={0}>Attorneys</div>
           </div>
 
         <div className="flex items-center border border-gray-300 rounded-lg flex-grow mt-3">
@@ -236,12 +238,63 @@ const ResultList: React.FC<Props> = ({ data, fetchFilteredData }) => {
         />
         </div>
         
-        <div className='my-5 h-20 overflow-auto pl-4'>
-            <input type='checkbox' className='mr-3'/><span>Tesla, Inc. </span><br/>
-            <input type='checkbox' className='mr-3'/><span>LegalForce RAPC </span><br/>
-            <input type='checkbox' className='mr-3'/><span>Space X Inc.</span><br/>
-            <input type='checkbox' className='mr-3'/><span>Tesla, Inc. </span><br/>
-            <input type='checkbox' className='mr-3'/><span>Space X, Inc </span>
+        <div className='my-5 h-48 overflow-auto pl-4'>
+          <div className='flex flex-row items-center my-2'>
+            <div className='h-3 w-3 bg-gray-200 border border-gray-300 rounded-sm transition-all duration-300 hover:border-blue-500 hover:shadow-[0px_0px_4px_2px_rgba(173,216,230,0.75)]'></div>
+            <div className='ml-2 hover:text-blue-500 transition-all duration-300 '>carolina herrera ltd</div>
+          </div>
+
+
+          <div className='flex flex-row items-center my-2'>
+            <div className='h-3 w-3 bg-gray-200 border border-gray-300 rounded-sm transition-all duration-300 hover:border-blue-500 hover:shadow-[0px_0px_4px_2px_rgba(173,216,230,0.75)]'></div>
+            <div className='ml-2 hover:text-blue-500 transition-all duration-300'>paul judy</div>
+        </div>
+
+        <div className='flex flex-row items-center my-2'>
+            <div className='h-3 w-3 bg-gray-200 border border-gray-300 rounded-sm transition-all duration-300 hover:border-blue-500 hover:shadow-[0px_0px_4px_2px_rgba(173,216,230,0.75)]'></div>
+            <div className='ml-2 hover:text-blue-500 transition-all duration-300'>chrome hearts llc</div>
+        </div>
+
+        <div className='flex flex-row items-center my-2'>
+            <div className='h-3 w-3 bg-gray-200 border border-gray-300 rounded-sm transition-all duration-300 hover:border-blue-500 hover:shadow-[0px_0px_4px_2px_rgba(173,216,230,0.75)]'></div>
+            <div className='ml-2 hover:text-blue-500 transition-all duration-300'>joseph enterprises inc</div>
+        </div>
+
+        <div className='flex flex-row items-center my-2'>
+            <div className='h-3 w-3 bg-gray-200 border border-gray-300 rounded-sm transition-all duration-300 hover:border-blue-500 hover:shadow-[0px_0px_4px_2px_rgba(173,216,230,0.75)]'></div>
+            <div className='ml-2 hover:text-blue-500 transition-all duration-300'>clhk u llc</div>
+        </div>
+
+        <div className='flex flex-row items-center my-2'>
+            <div className='h-3 w-3 bg-gray-200 border border-gray-300 rounded-sm transition-all duration-300 hover:border-blue-500 hover:shadow-[0px_0px_4px_2px_rgba(173,216,230,0.75)]'></div>
+            <div className='ml-2 hover:text-blue-500 transition-all duration-300'>stainless incorporated</div>
+        </div>
+
+        <div className='flex flex-row items-center my-2'>
+            <div className='h-3 w-3 bg-gray-200 border border-gray-300 rounded-sm transition-all duration-300 hover:border-blue-500 hover:shadow-[0px_0px_4px_2px_rgba(173,216,230,0.75)]'></div>
+            <div className='ml-2 hover:text-blue-500 transition-all duration-300'>walgreen co</div>
+        </div>
+
+        <div className='flex flex-row items-center my-2'>
+            <div className='h-3 w-3 bg-gray-200 border border-gray-300 rounded-sm transition-all duration-300 hover:border-blue-500 hover:shadow-[0px_0px_4px_2px_rgba(173,216,230,0.75)]'></div>
+            <div className='ml-2 hover:text-blue-500 transition-all duration-300'>charles heidsick lc</div>
+        </div>
+
+        <div className='flex flex-row items-center my-2'>
+            <div className='h-3 w-3 bg-gray-200 border border-gray-300 rounded-sm transition-all duration-300 hover:border-blue-500 hover:shadow-[0px_0px_4px_2px_rgba(173,216,230,0.75)]'></div>
+            <div className='ml-2 hover:text-blue-500 transition-all duration-300'>dorsey whitney</div>
+        </div>
+
+        <div className='flex flex-row items-center my-2'>
+            <div className='h-3 w-3 bg-gray-200 border border-gray-300 rounded-sm transition-all duration-300 hover:border-blue-500 hover:shadow-[0px_0px_4px_2px_rgba(173,216,230,0.75)]'></div>
+            <div className='ml-2 hover:text-blue-500 transition-all duration-300'>greenberg turing llp</div>
+        </div>
+
+        <div className='flex flex-row items-center my-2'>
+            <div className='h-3 w-3 bg-gray-200 border border-gray-300 rounded-sm transition-all duration-300 hover:border-blue-500 hover:shadow-[0px_0px_4px_2px_rgba(173,216,230,0.75)]'></div>
+            <div className='ml-2 hover:text-blue-500 transition-all duration-300'>nixon vandhyere</div>
+        </div>
+        
         </div>
 
         </div>

@@ -4,6 +4,7 @@
 
 *{
   font-family: 'Gilroy', sans-serif;
+  box-sizing: border-box;
 }
 
 /* styles/globals.css or a specific CSS file */
