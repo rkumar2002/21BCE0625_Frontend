@@ -1,13 +1,15 @@
 // components/SearchSuggestions.tsx
 import React from 'react';
 import { FaFilter, FaShareAlt } from 'react-icons/fa';
+import { useRouter } from 'next/router';
 
 interface SearchSuggestionsProps {
   suggestions: string[];
   onSuggestionClick: (suggestion: string) => void;
+  onShareClick: () => void; // Add this line
 }
 
-const SearchSuggestions: React.FC<SearchSuggestionsProps> = ({ suggestions, onSuggestionClick }) => {
+const SearchSuggestions: React.FC<SearchSuggestionsProps> = ({ suggestions, onSuggestionClick, onShareClick }) => {
   return (
     <div className="search-suggestions flex justify-between items-center px-5">
       <div className="suggestions-buttons flex items-center">
@@ -29,7 +31,7 @@ const SearchSuggestions: React.FC<SearchSuggestionsProps> = ({ suggestions, onSu
           <FaFilter className="text-dark-gray mr-2" />
           Filter
         </button>
-        <button className="share-button flex items-center justify-center border border-light-gray rounded-full w-10 h-10 ml-4">
+        <button className="share-button flex items-center justify-center border border-light-gray rounded-full w-10 h-10 ml-4" onClick={onShareClick}>
           <FaShareAlt className="text-dark-gray" />
         </button>
       </div>
@@ -38,3 +40,4 @@ const SearchSuggestions: React.FC<SearchSuggestionsProps> = ({ suggestions, onSu
 };
 
 export default SearchSuggestions;
+
