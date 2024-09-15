@@ -1,6 +1,9 @@
+
 import React, { useState } from 'react';
 import Image from 'next/image'; 
 import circularIcon from '../public/circular-arrow.png';
+import { FaSearch } from 'react-icons/fa';
+
 
 interface Trademark {
   _id: string;
@@ -18,7 +21,7 @@ interface Trademark {
 
 interface Props {
   data: Trademark[];
-  fetchFilteredData: (status: string[] | null) => void; // callback for fetching filtered data
+  fetchFilteredData: (status: string[] | null) => void; // Add a callback for fetching filtered data
 }
 
 const ResultList: React.FC<Props> = ({ data, fetchFilteredData }) => {
@@ -41,8 +44,8 @@ const ResultList: React.FC<Props> = ({ data, fetchFilteredData }) => {
         return '#ECC53C'; // Yellow
       case 'abandoned':
         return '#EC3C3C'; // Red
-      case 'others': 
-        return '#4380ec'; // Blue
+      case 'others': // Adding "Others" as a status color
+        return '#4380ec'; // Blue for "Others"
       default:
         return '#4380ec'; // Default blue
     }
@@ -219,7 +222,29 @@ const ResultList: React.FC<Props> = ({ data, fetchFilteredData }) => {
       </button>
     </div>
   </div>
+  <div className='bg-white shadow-sm p-5 rounded-md'>
+          <div className='text-sm'>
+            <span className='mr-4 cursor-pointer hover:font-bold'>Owners</span><span className='mr-4 cursor-pointer hover:font-bold'>Law Firms</span><span className='cursor-pointer hover:font-bold'>Attorneys</span>
+          </div>
 
+        <div className="flex items-center border border-gray-300 rounded-lg flex-grow mt-3">
+        <FaSearch className="text-gray-500 ml-2" />
+        <input
+          type="text"
+          placeholder="Search"
+          className="border-none p-2 rounded-lg w-full focus:outline-none"
+        />
+        </div>
+        
+        <div className='my-5 h-20 overflow-auto pl-4'>
+            <input type='checkbox' className='mr-3'/><span>Tesla, Inc. </span><br/>
+            <input type='checkbox' className='mr-3'/><span>LegalForce RAPC </span><br/>
+            <input type='checkbox' className='mr-3'/><span>Space X Inc.</span><br/>
+            <input type='checkbox' className='mr-3'/><span>Tesla, Inc. </span><br/>
+            <input type='checkbox' className='mr-3'/><span>Space X, Inc </span>
+        </div>
+
+        </div>
   {/* Display Options */}
   <div className='bg-white shadow-sm p-5 rounded-md'>
     <p className='font-bold mb-2'>Display</p>
@@ -253,3 +278,5 @@ const ResultList: React.FC<Props> = ({ data, fetchFilteredData }) => {
 };
 
 export default ResultList;
+
+
