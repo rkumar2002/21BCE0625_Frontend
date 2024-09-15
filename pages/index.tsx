@@ -4,7 +4,7 @@ import SearchBar from '../components/SearchBar';
 import SearchResultsSummary from '../components/SearchResultsSummary';
 import ResultList from '../components/ResultList';
 import SearchSuggestions from '../components/SearchSuggestions';
-import Pagination from '../components/Pagination'; // Import Pagination component
+import Pagination from '../components/Pagination'; 
 import { fetchTrademarks } from '../services/trademarkService';
 import { useRouter } from 'next/router';
 
